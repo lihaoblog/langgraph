@@ -1,4 +1,4 @@
-# 该文件为了增加参数，规范化工具
+# 该文件为了增加参数，规范化工具，用类CalculateArgs(BaseModel)
 
 from langchain_core.tools import tool
 # BaseModel帮助你定义结构化的数据模型（类似于数据库表结构或数据类），并自动做类型校验和转换。

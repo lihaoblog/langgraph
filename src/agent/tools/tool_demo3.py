@@ -1,14 +1,10 @@
-# 该文件为了增加参数，规范化工具，另一种写法
+# 该文件为了增加参数，规范化工具，另一种写法Annotated
 from typing import Annotated
 
 from langchain_core.tools import tool
 # BaseModel帮助你定义结构化的数据模型（类似于数据库表结构或数据类），并自动做类型校验和转换。
 # BaseModel 是 Pydantic 提供的基类，用来定义“模型类（Model）
 from pydantic import BaseModel, Field
-
-
-
-
 
 #声明是个工具
 @tool('calculate')

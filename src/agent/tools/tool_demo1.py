@@ -1,6 +1,6 @@
 from langchain_core.tools import tool
 
-#工具前面要给的定义
+#工具前面要给的定义,初步定义
 @tool('',return_direct=False)
 def calculate1(a: float, b: float, operate: str) -> float:
     """用于数学运算的工具函数"""
