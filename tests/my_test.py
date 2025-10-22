@@ -10,9 +10,11 @@ async def main():
         input={
         "messages": [{
             "role": "human",
-            "content": "今天天气怎么样?",
+            "content": "告诉我当前用户的年龄?",
             }],
         },
+        stream_mode="messages-tuple",
+        config={"configurable":{"user_name":"user_123"}}
     ):
         print(f"Receiving new event of type: {chunk.event}...")
         print(chunk.data)

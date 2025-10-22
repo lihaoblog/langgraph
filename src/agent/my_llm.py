@@ -2,7 +2,7 @@
 #导入的ChatOpenAI所以要用ChatOpenAI实例，除此之外还有langchain自己也有叫ChatAnthropic要install langchain-anthorpic
 #其实所有的模型都可以用ChatOpenAI实例来达到同样的标准
 from langchain_openai import ChatOpenAI
-from env_utils import OPENAI_BASE_URL ,OPENAI_API_KEY ,DEEPSEEK_BASE_URL ,DEEPSEEK_API_KEY,LOCAL_BASE_URL
+from agent.env_utils import LOCAL_BASE_URL
 
 
 
@@ -16,13 +16,13 @@ from env_utils import OPENAI_BASE_URL ,OPENAI_API_KEY ,DEEPSEEK_BASE_URL ,DEEPSE
 # )
 
 # 这个是本地私有化部署的deepseek,需要开代理,tool-call-parser hermes这个设置会导致流式输出报错，
-llm=ChatOpenAI(
-    model='ds-qwen3-8b',
-    temperature = 0.7,
-    api_key='xx',
-    base_url=LOCAL_BASE_URL,
-    extra_body={'chat_template_kwargs':{'enable_thing':False}},
-)
+# llm=ChatOpenAI(
+#     model='ds-qwen3-8b',
+#     temperature = 0.7,
+#     api_key='xx',
+#     base_url=LOCAL_BASE_URL,
+#     extra_body={'chat_template_kwargs':{'enable_thing':False}},
+# )
 
 
 # 这个是claude,改一下模型名字就好了
