@@ -4,17 +4,18 @@ from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 from langgraph.prebuilt.chat_agent_executor import AgentState
 
+from agent.env_utils import LOCAL_BASE_URL
 from agent.tools.tool_demo2 import calculate2
 from agent.tools.tool_demo5 import runnable_tool
 from agent.tools.tool_demo7 import get_user_message
 
 # 本地私有化部署的大模型
-llm = ChatOpenAI(
-    model='qwen3-8b',
-    temperature=0.8,
+llm=ChatOpenAI(
+    model='ds-qwen3-8b',
+    temperature = 0.7,
     api_key='xx',
-    base_url="http://localhost:6006/v1",
-    extra_body={'chat_template_kwargs': {'enable_thinking': False}},
+    base_url=LOCAL_BASE_URL,
+    extra_body={'chat_template_kwargs':{'enable_thing':False}},
 )
 
 # def get_weather(city: str) -> str:

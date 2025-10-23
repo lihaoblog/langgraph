@@ -34,11 +34,11 @@ def calculate2(a: float, b: float, operate: str) -> float:
                 result=a / b
     return result
 
-# 下面是工具的信息，名字啥的
-print(calculate2.name)
-print(calculate2.description)
-print(calculate2.args)
-print(calculate2.return_direct)
-# 参数定义结构
-print(calculate2.args_schema.model_json_schema())
+# # 下面是工具的信息，名字啥的
+# print(calculate2.name)
+# print(calculate2.description)
+# print(calculate2.args)
+# print(calculate2.return_direct)
+# # 参数定义结构
+# print(calculate2.args_schema.model_json_schema())
 

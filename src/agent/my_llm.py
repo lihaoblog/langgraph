@@ -2,9 +2,7 @@
 #导入的ChatOpenAI所以要用ChatOpenAI实例，除此之外还有langchain自己也有叫ChatAnthropic要install langchain-anthorpic
 #其实所有的模型都可以用ChatOpenAI实例来达到同样的标准
 from langchain_openai import ChatOpenAI
-from agent.env_utils import LOCAL_BASE_URL
-
-
+from agent.env_utils import LOCAL_BASE_URL, DEEPSEEK_BASE_URL, DEEPSEEK_API_KEY
 
 # 这个是调用gpt的
 # llm=ChatOpenAI(
@@ -36,13 +34,13 @@ from agent.env_utils import LOCAL_BASE_URL
 
 
 # 用国内的deepseek
-# llm=ChatOpenAI(
-#     model='deepseek-reasoner',
-#     temperature = 0.7,
-#     base_url=DEEPSEEK_BASE_URL,
-#     api_key=DEEPSEEK_API_KEY,
-#
-# )
+llm=ChatOpenAI(
+    model='deepseek-reasoner',
+    temperature = 0.7,
+    base_url=DEEPSEEK_BASE_URL,
+    api_key=DEEPSEEK_API_KEY,
+
+)
 
 # 下命令,可以用字典或者二元祖
 # message=[('system','你是一个智能助手'),
