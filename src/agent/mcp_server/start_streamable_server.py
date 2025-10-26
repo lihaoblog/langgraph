@@ -1,4 +1,4 @@
-# 用SSE方式调用工具
+# 用streamable_http方式调用工具
 from tool_server2 import server
 
 if __name__=='__main__':
