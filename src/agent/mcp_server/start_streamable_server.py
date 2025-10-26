@@ -1,5 +1,5 @@
 # 用SSE方式调用工具
-from agent.mcp_server.tool_server import server
+from tool_server2 import server
 
 if __name__=='__main__':
     # 调用方式
